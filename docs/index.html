@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OpenAI Logprobs Support Stats</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f3f3;
+      text-align: left;
+    }
+    .yes {
+      color: green;
+      font-weight: bold;
+    }
+    .no {
+      color: red;
+      font-weight: bold;
+    }
+    code {
+      background: #f6f6f6;
+      padding: 2px 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>OpenAI Logprobs Support Stats</h1>
+  <p>Last updated: 2026-06-11T09:07:03.143465+00:00</p>
+  <p>Total models seen from <code>/v1/models</code>: 120</p>
+  <p>Likely text/chat models tested: 66</p>
+  <p>Supporting models: 26 / 66</p>
+
+  <table>
+    <tr>
+      <th>Model</th>
+      <th>Shows logprobs?</th>
+      <th>HTTP status</th>
+      <th>Latency ms</th>
+      <th>Error type</th>
+      <th>Error message</th>
+    </tr>
+    
+    <tr>
+      <td>gpt-3.5-turbo</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1766.56</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-3.5-turbo-0125</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1995.39</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-3.5-turbo-1106</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>3339.87</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-3.5-turbo-16k</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>793.83</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1069.55</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4-0613</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1561.79</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4-turbo</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1379.99</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4-turbo-2024-04-09</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>1446.05</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>904.42</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1-2025-04-14</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>460.37</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1-mini</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>393.59</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1-mini-2025-04-14</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>387.91</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1-nano</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>594.88</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4.1-nano-2025-04-14</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>588.83</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>528.55</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o-2024-05-13</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>438.85</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o-2024-08-06</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>439.97</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o-2024-11-20</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>369.8</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o-mini</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>444.83</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-4o-mini-2024-07-18</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>464.11</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>92.03</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-2025-08-07</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>87.22</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-chat-latest</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>81.3</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-codex</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>99.12</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-mini</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>87.57</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-mini-2025-08-07</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>75.3</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-nano</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>79.72</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-nano-2025-08-07</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>83.88</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-pro</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>89.3</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5-pro-2025-10-06</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>109.15</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1</td>
+      <td class="no">No</td>
+      <td>None</td>
+      <td>90135.14</td>
+      <td>exception</td>
+      <td>The read operation timed out</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1-2025-11-13</td>
+      <td class="no">No</td>
+      <td>400</td>
+      <td>555.75</td>
+      <td>invalid_request_error</td>
+      <td>Could not finish the message because max_tokens or model output limit was reached. Please try again with higher max_tokens.</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1-chat-latest</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>75.23</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1-codex</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>89.89</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1-codex-max</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>82.4</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.1-codex-mini</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>80.51</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>659.43</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2-2025-12-11</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>676.52</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2-chat-latest</td>
+      <td class="no">No</td>
+      <td>400</td>
+      <td>102.48</td>
+      <td>invalid_request_error</td>
+      <td>Unsupported parameter: &#x27;logprobs&#x27; is not supported with this model.</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2-codex</td>
+      <td class="no">No</td>
+      <td>404</td>
+      <td>111.4</td>
+      <td>invalid_request_error</td>
+      <td>This is not a chat model and thus not supported in the v1/chat/completions endpoint. Did you mean to use v1/completions?</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2-pro</td>
+      <td class="no">No</td>
+      <td>404</td>
+      <td>96.19</td>
+      <td>invalid_request_error</td>
+      <td>This is not a chat model and thus not supported in the v1/chat/completions endpoint. Did you mean to use v1/completions?</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.2-pro-2025-12-11</td>
+      <td class="no">No</td>
+      <td>404</td>
+      <td>90.43</td>
+      <td>invalid_request_error</td>
+      <td>This is not a chat model and thus not supported in the v1/chat/completions endpoint. Did you mean to use v1/completions?</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.3-chat-latest</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>79.86</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.3-codex</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>81.13</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>465.58</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-2026-03-05</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>83.31</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-mini</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>610.59</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-mini-2026-03-17</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>80.44</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-nano</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>365.34</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-nano-2026-03-17</td>
+      <td class="yes">Yes</td>
+      <td>200</td>
+      <td>402.3</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-pro</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>86.57</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.4-pro-2026-03-05</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>81.08</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.5</td>
+      <td class="no">No</td>
+      <td>400</td>
+      <td>141.17</td>
+      <td>invalid_request_error</td>
+      <td>Unsupported parameter: &#x27;logprobs&#x27; is not supported with this model.</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.5-2026-04-23</td>
+      <td class="no">No</td>
+      <td>400</td>
+      <td>325.16</td>
+      <td>invalid_request_error</td>
+      <td>Unsupported parameter: &#x27;logprobs&#x27; is not supported with this model.</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.5-pro</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>84.97</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>gpt-5.5-pro-2026-04-23</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>79.24</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o1</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>83.01</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o1-2024-12-17</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>81.36</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o1-pro</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>81.27</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o1-pro-2025-03-19</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>82.3</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o3</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>77.42</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o3-2025-04-16</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>80.93</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o3-mini</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>92.5</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o3-mini-2025-01-31</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>90.04</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o4-mini</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>84.64</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+    <tr>
+      <td>o4-mini-2025-04-16</td>
+      <td class="no">No</td>
+      <td>403</td>
+      <td>93.54</td>
+      <td>invalid_request_error</td>
+      <td>You are not allowed to request logprobs from this model</td>
+    </tr>
+    
+  </table>
+
+  <h2>Archive</h2>
+  <p>Daily JSON snapshots are saved in <code>archive/YYYY-MM-DD.json</code>.</p>
+  <p><a href="latest.json">latest.json</a></p>
+</body>
+</html>
