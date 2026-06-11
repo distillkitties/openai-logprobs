@@ -1,0 +1,329 @@
+name: OpenAI Logprobs Support Stats
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  check-logprobs:
+    runs-on: ubuntu-latest
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check all OpenAI models for logprobs support
+        run: |
+          python <<'PY'
+          import json
+          import os
+          import time
+          import html
+          import urllib.request
+          import urllib.error
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          api_key = os.environ["OPENAI_API_KEY"]
+
+          headers = {
+              "Authorization": f"Bearer {api_key}",
+              "Content-Type": "application/json",
+          }
+
+          def request_json(method, url, payload=None, timeout=60):
+              data = None
+              if payload is not None:
+                  data = json.dumps(payload).encode("utf-8")
+
+              req = urllib.request.Request(
+                  url,
+                  data=data,
+                  headers=headers,
+                  method=method,
+              )
+
+              with urllib.request.urlopen(req, timeout=timeout) as response:
+                  return response.status, json.loads(response.read().decode("utf-8"))
+
+          def list_models():
+              status, body = request_json(
+                  "GET",
+                  "https://api.openai.com/v1/models",
+                  None,
+                  timeout=60,
+              )
+
+              model_ids = sorted(
+                  item["id"]
+                  for item in body.get("data", [])
+                  if isinstance(item, dict) and item.get("id")
+              )
+
+              return model_ids
+
+          def is_likely_text_model(model):
+              excluded_fragments = [
+                  "audio",
+                  "tts",
+                  "whisper",
+                  "transcribe",
+                  "speech",
+                  "image",
+                  "dall",
+                  "embedding",
+                  "moderation",
+                  "omni-moderation",
+                  "realtime",
+                  "search",
+                  "instruct",
+                  "babbage",
+                  "davinci",
+                  "curie",
+                  "ada",
+              ]
+
+              if any(fragment in model for fragment in excluded_fragments):
+                  return False
+
+              included_prefixes = (
+                  "gpt-",
+                  "chatgpt-",
+                  "o1",
+                  "o3",
+                  "o4",
+              )
+
+              return model.startswith(included_prefixes)
+
+          def max_tokens_key_for(model):
+              if model.startswith(("o1", "o3", "o4", "gpt-5")):
+                  return "max_completion_tokens"
+              return "max_tokens"
+
+          def post_chat(model):
+              payload = {
+                  "model": model,
+                  "messages": [
+                      {"role": "user", "content": "Reply with exactly one word: yes"}
+                  ],
+                  "logprobs": True,
+                  "top_logprobs": 5,
+              }
+
+              payload[max_tokens_key_for(model)] = 8
+
+              req = urllib.request.Request(
+                  "https://api.openai.com/v1/chat/completions",
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers=headers,
+                  method="POST",
+              )
+
+              start = time.perf_counter()
+
+              try:
+                  with urllib.request.urlopen(req, timeout=90) as response:
+                      body = json.loads(response.read().decode("utf-8"))
+                      choice = body.get("choices", [{}])[0]
+                      logprobs = choice.get("logprobs")
+                      content_logprobs = (logprobs or {}).get("content") or []
+
+                      return {
+                          "model": model,
+                          "supports_logprobs": len(content_logprobs) > 0,
+                          "http_status": response.status,
+                          "latency_ms": round((time.perf_counter() - start) * 1000, 2),
+                          "model_returned": body.get("model"),
+                          "error_type": None,
+                          "error_message": None,
+                      }
+
+              except urllib.error.HTTPError as e:
+                  raw = e.read().decode("utf-8", errors="replace")
+                  try:
+                      parsed = json.loads(raw)
+                      error = parsed.get("error", {})
+                      error_type = error.get("type")
+                      error_message = error.get("message")
+                  except Exception:
+                      error_type = "http_error"
+                      error_message = raw[:1000]
+
+                  return {
+                      "model": model,
+                      "supports_logprobs": False,
+                      "http_status": e.code,
+                      "latency_ms": round((time.perf_counter() - start) * 1000, 2),
+                      "model_returned": None,
+                      "error_type": error_type,
+                      "error_message": error_message,
+                  }
+
+              except Exception as e:
+                  return {
+                      "model": model,
+                      "supports_logprobs": False,
+                      "http_status": None,
+                      "latency_ms": round((time.perf_counter() - start) * 1000, 2),
+                      "model_returned": None,
+                      "error_type": "exception",
+                      "error_message": str(e),
+                  }
+
+          now = datetime.now(timezone.utc)
+          date = now.strftime("%Y-%m-%d")
+          timestamp = now.isoformat()
+
+          all_models = list_models()
+          models_to_test = [m for m in all_models if is_likely_text_model(m)]
+
+          results = []
+
+          for model in models_to_test:
+              print(f"Testing {model}", flush=True)
+              results.append(post_chat(model))
+
+          supported = [r for r in results if r["supports_logprobs"]]
+          unsupported = [r for r in results if not r["supports_logprobs"]]
+
+          snapshot = {
+              "timestamp_utc": timestamp,
+              "date": date,
+              "total_models_seen": len(all_models),
+              "tested_models_count": len(models_to_test),
+              "supported_count": len(supported),
+              "unsupported_count": len(unsupported),
+              "all_model_ids_seen": all_models,
+              "tested_model_ids": models_to_test,
+              "results": results,
+          }
+
+          Path("docs/archive").mkdir(parents=True, exist_ok=True)
+
+          Path(f"docs/archive/{date}.json").write_text(
+              json.dumps(snapshot, indent=2),
+              encoding="utf-8",
+          )
+
+          Path("docs/latest.json").write_text(
+              json.dumps(snapshot, indent=2),
+              encoding="utf-8",
+          )
+
+          rows = ""
+
+          for r in results:
+              cls = "yes" if r["supports_logprobs"] else "no"
+              label = "Yes" if r["supports_logprobs"] else "No"
+              err = r.get("error_message") or ""
+              if len(err) > 180:
+                  err = err[:180] + "..."
+
+              rows += f"""
+              <tr>
+                <td>{html.escape(str(r["model"]))}</td>
+                <td class="{cls}">{label}</td>
+                <td>{html.escape(str(r["http_status"]))}</td>
+                <td>{html.escape(str(r["latency_ms"]))}</td>
+                <td>{html.escape(str(r.get("error_type") or ""))}</td>
+                <td>{html.escape(err)}</td>
+              </tr>
+              """
+
+          page = f"""<!doctype html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <title>OpenAI Logprobs Support Stats</title>
+            <style>
+              body {{
+                font-family: system-ui, sans-serif;
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 0 20px;
+              }}
+              table {{
+                border-collapse: collapse;
+                width: 100%;
+                font-size: 14px;
+              }}
+              th, td {{
+                border: 1px solid #ddd;
+                padding: 8px;
+                vertical-align: top;
+              }}
+              th {{
+                background: #f3f3f3;
+                text-align: left;
+              }}
+              .yes {{
+                color: green;
+                font-weight: bold;
+              }}
+              .no {{
+                color: red;
+                font-weight: bold;
+              }}
+              code {{
+                background: #f6f6f6;
+                padding: 2px 4px;
+              }}
+            </style>
+          </head>
+          <body>
+            <h1>OpenAI Logprobs Support Stats</h1>
+            <p>Last updated: {html.escape(timestamp)}</p>
+            <p>Total models seen from <code>/v1/models</code>: {len(all_models)}</p>
+            <p>Likely text/chat models tested: {len(results)}</p>
+            <p>Supporting models: {len(supported)} / {len(results)}</p>
+
+            <table>
+              <tr>
+                <th>Model</th>
+                <th>Shows logprobs?</th>
+                <th>HTTP status</th>
+                <th>Latency ms</th>
+                <th>Error type</th>
+                <th>Error message</th>
+              </tr>
+              {rows}
+            </table>
+
+            <h2>Archive</h2>
+            <p>Daily JSON snapshots are saved in <code>archive/YYYY-MM-DD.json</code>.</p>
+            <p><a href="latest.json">latest.json</a></p>
+          </body>
+          </html>
+          """
+
+          Path("docs/index.html").write_text(page, encoding="utf-8")
+          PY
+
+      - name: Commit archive and webpage
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Update OpenAI logprobs stats" || echo "No changes to commit"
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - uses: actions/deploy-pages@v4
