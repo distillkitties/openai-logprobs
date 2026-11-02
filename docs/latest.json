@@ -1,6 +1,6 @@
 {
-  "timestamp_utc": "2026-11-01T12:48:03.969327+00:00",
-  "date": "2026-11-01",
+  "timestamp_utc": "2026-11-02T14:57:18.211647+00:00",
+  "date": "2026-11-02",
   "total_models_seen": 136,
   "tested_models_count": 75,
   "supported_count": 15,
@@ -225,7 +225,7 @@
       "model": "gpt-3.5-turbo",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 1025.45,
+      "latency_ms": 1208.13,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-3.5-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -234,7 +234,7 @@
       "model": "gpt-3.5-turbo-0125",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 343.98,
+      "latency_ms": 100.71,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-3.5-turbo-0125` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -243,7 +243,7 @@
       "model": "gpt-3.5-turbo-1106",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 306.09,
+      "latency_ms": 319.02,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-3.5-turbo-1106` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -252,7 +252,7 @@
       "model": "gpt-3.5-turbo-16k",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 321.91,
+      "latency_ms": 307.21,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-3.5-turbo-16k` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -261,7 +261,7 @@
       "model": "gpt-4",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 107.06,
+      "latency_ms": 87.39,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -270,7 +270,7 @@
       "model": "gpt-4-0613",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 291.91,
+      "latency_ms": 319.82,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4-0613` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -279,7 +279,7 @@
       "model": "gpt-4-turbo",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 106.01,
+      "latency_ms": 90.22,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4-turbo` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -288,7 +288,7 @@
       "model": "gpt-4-turbo-2024-04-09",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 116.2,
+      "latency_ms": 75.84,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4-turbo-2024-04-09` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -297,7 +297,7 @@
       "model": "gpt-4.1",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 798.47,
+      "latency_ms": 784.55,
       "model_returned": "gpt-4.1-2025-04-14",
       "error_type": null,
       "error_message": null
@@ -306,7 +306,7 @@
       "model": "gpt-4.1-2025-04-14",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 664.66,
+      "latency_ms": 604.04,
       "model_returned": "gpt-4.1-2025-04-14",
       "error_type": null,
       "error_message": null
@@ -315,7 +315,7 @@
       "model": "gpt-4.1-mini",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 644.69,
+      "latency_ms": 866.66,
       "model_returned": "gpt-4.1-mini-2025-04-14",
       "error_type": null,
       "error_message": null
@@ -324,7 +324,7 @@
       "model": "gpt-4.1-mini-2025-04-14",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 916.41,
+      "latency_ms": 697.15,
       "model_returned": "gpt-4.1-mini-2025-04-14",
       "error_type": null,
       "error_message": null
@@ -333,7 +333,7 @@
       "model": "gpt-4.1-nano",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 212.4,
+      "latency_ms": 74.01,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4.1-nano` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -342,7 +342,7 @@
       "model": "gpt-4.1-nano-2025-04-14",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 118.46,
+      "latency_ms": 327.59,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4.1-nano-2025-04-14` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -351,7 +351,7 @@
       "model": "gpt-4o",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 487.11,
+      "latency_ms": 824.38,
       "model_returned": "gpt-4o-2024-08-06",
       "error_type": null,
       "error_message": null
@@ -360,7 +360,7 @@
       "model": "gpt-4o-2024-05-13",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 81.53,
+      "latency_ms": 74.25,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-4o-2024-05-13` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -369,7 +369,7 @@
       "model": "gpt-4o-2024-08-06",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 1178.71,
+      "latency_ms": 714.96,
       "model_returned": "gpt-4o-2024-08-06",
       "error_type": null,
       "error_message": null
@@ -378,7 +378,7 @@
       "model": "gpt-4o-2024-11-20",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 561.23,
+      "latency_ms": 469.82,
       "model_returned": "gpt-4o-2024-11-20",
       "error_type": null,
       "error_message": null
@@ -387,7 +387,7 @@
       "model": "gpt-4o-mini",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 545.21,
+      "latency_ms": 646.39,
       "model_returned": "gpt-4o-mini-2024-07-18",
       "error_type": null,
       "error_message": null
@@ -396,7 +396,7 @@
       "model": "gpt-4o-mini-2024-07-18",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 465.6,
+      "latency_ms": 348.79,
       "model_returned": "gpt-4o-mini-2024-07-18",
       "error_type": null,
       "error_message": null
@@ -405,7 +405,7 @@
       "model": "gpt-5",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 79.26,
+      "latency_ms": 92.41,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -414,7 +414,7 @@
       "model": "gpt-5-2025-08-07",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 116.57,
+      "latency_ms": 66.33,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -423,7 +423,7 @@
       "model": "gpt-5-chat-latest",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 108.87,
+      "latency_ms": 95.52,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5-chat-latest` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -432,7 +432,7 @@
       "model": "gpt-5-codex",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 119.56,
+      "latency_ms": 73.1,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5-codex` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -441,7 +441,7 @@
       "model": "gpt-5-mini",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 111.77,
+      "latency_ms": 86.49,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -450,7 +450,7 @@
       "model": "gpt-5-mini-2025-08-07",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 120.52,
+      "latency_ms": 66.95,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -459,7 +459,7 @@
       "model": "gpt-5-nano",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 164.32,
+      "latency_ms": 76.31,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -468,7 +468,7 @@
       "model": "gpt-5-nano-2025-08-07",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 126.46,
+      "latency_ms": 66.85,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -477,7 +477,7 @@
       "model": "gpt-5-pro",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 99.56,
+      "latency_ms": 83.2,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -486,7 +486,7 @@
       "model": "gpt-5-pro-2025-10-06",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 153.99,
+      "latency_ms": 80.23,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -495,7 +495,7 @@
       "model": "gpt-5.1",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 638.5,
+      "latency_ms": 578.58,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Could not finish the message because max_tokens or model output limit was reached. Please try again with higher max_tokens."
@@ -504,7 +504,7 @@
       "model": "gpt-5.1-2025-11-13",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 640.31,
+      "latency_ms": 867.14,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Could not finish the message because max_tokens or model output limit was reached. Please try again with higher max_tokens."
@@ -513,7 +513,7 @@
       "model": "gpt-5.1-chat-latest",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 91.75,
+      "latency_ms": 89.64,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.1-chat-latest` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -522,7 +522,7 @@
       "model": "gpt-5.1-codex",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 80.34,
+      "latency_ms": 86.04,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.1-codex` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -531,7 +531,7 @@
       "model": "gpt-5.1-codex-max",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 99.01,
+      "latency_ms": 75.18,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.1-codex-max` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -540,7 +540,7 @@
       "model": "gpt-5.1-codex-mini",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 113.58,
+      "latency_ms": 91.21,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.1-codex-mini` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -549,7 +549,7 @@
       "model": "gpt-5.2",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 801.55,
+      "latency_ms": 727.6,
       "model_returned": "gpt-5.2-2025-12-11",
       "error_type": null,
       "error_message": null
@@ -558,7 +558,7 @@
       "model": "gpt-5.2-2025-12-11",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 804.34,
+      "latency_ms": 617.97,
       "model_returned": "gpt-5.2-2025-12-11",
       "error_type": null,
       "error_message": null
@@ -567,7 +567,7 @@
       "model": "gpt-5.2-chat-latest",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 84.01,
+      "latency_ms": 84.55,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.2-chat-latest` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -576,7 +576,7 @@
       "model": "gpt-5.2-codex",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 83.17,
+      "latency_ms": 72.09,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.2-codex` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -585,7 +585,7 @@
       "model": "gpt-5.2-pro",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 156.24,
+      "latency_ms": 120.14,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "This is not a chat model and thus not supported in the v1/chat/completions endpoint. Did you mean to use v1/completions?"
@@ -594,7 +594,7 @@
       "model": "gpt-5.2-pro-2025-12-11",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 223.14,
+      "latency_ms": 203.49,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "This is not a chat model and thus not supported in the v1/chat/completions endpoint. Did you mean to use v1/completions?"
@@ -603,7 +603,7 @@
       "model": "gpt-5.3-chat-latest",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 150.02,
+      "latency_ms": 60.91,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `gpt-5.3-chat-latest` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -612,7 +612,7 @@
       "model": "gpt-5.3-codex",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 89.12,
+      "latency_ms": 74.54,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -621,7 +621,7 @@
       "model": "gpt-5.4",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 745.17,
+      "latency_ms": 630.39,
       "model_returned": "gpt-5.4-2026-03-05",
       "error_type": null,
       "error_message": null
@@ -630,7 +630,7 @@
       "model": "gpt-5.4-2026-03-05",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 171.37,
+      "latency_ms": 101.48,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -639,7 +639,7 @@
       "model": "gpt-5.4-mini",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 679.79,
+      "latency_ms": 610.31,
       "model_returned": "gpt-5.4-mini-2026-03-17",
       "error_type": null,
       "error_message": null
@@ -648,7 +648,7 @@
       "model": "gpt-5.4-mini-2026-03-17",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 89.54,
+      "latency_ms": 72.16,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -657,7 +657,7 @@
       "model": "gpt-5.4-nano",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 383.18,
+      "latency_ms": 568.37,
       "model_returned": "gpt-5.4-nano-2026-03-17",
       "error_type": null,
       "error_message": null
@@ -666,7 +666,7 @@
       "model": "gpt-5.4-nano-2026-03-17",
       "supports_logprobs": true,
       "http_status": 200,
-      "latency_ms": 601.6,
+      "latency_ms": 683.57,
       "model_returned": "gpt-5.4-nano-2026-03-17",
       "error_type": null,
       "error_message": null
@@ -675,7 +675,7 @@
       "model": "gpt-5.4-pro",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 104.73,
+      "latency_ms": 86.25,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -684,7 +684,7 @@
       "model": "gpt-5.4-pro-2026-03-05",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 103.11,
+      "latency_ms": 85.13,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -693,7 +693,7 @@
       "model": "gpt-5.5",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 118.27,
+      "latency_ms": 157.83,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'logprobs' is not supported with this model."
@@ -702,7 +702,7 @@
       "model": "gpt-5.5-2026-04-23",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 141.19,
+      "latency_ms": 246.81,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'logprobs' is not supported with this model."
@@ -711,7 +711,7 @@
       "model": "gpt-5.5-pro",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 104.45,
+      "latency_ms": 97.66,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -720,7 +720,7 @@
       "model": "gpt-5.5-pro-2026-04-23",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 101.85,
+      "latency_ms": 81.91,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -729,7 +729,7 @@
       "model": "gpt-5.6-luna",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 117.06,
+      "latency_ms": 110.28,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'logprobs' is not supported with this model."
@@ -738,7 +738,7 @@
       "model": "gpt-5.6-sol",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 154.69,
+      "latency_ms": 215.24,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'logprobs' is not supported with this model."
@@ -747,7 +747,7 @@
       "model": "gpt-5.6-terra",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 136.68,
+      "latency_ms": 124.89,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'logprobs' is not supported with this model."
@@ -756,7 +756,7 @@
       "model": "gpt-6-astra",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 142.53,
+      "latency_ms": 147.56,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead."
@@ -765,7 +765,7 @@
       "model": "gpt-6-luna",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 142.34,
+      "latency_ms": 100.93,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead."
@@ -774,7 +774,7 @@
       "model": "gpt-6-sol",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 122.65,
+      "latency_ms": 237.98,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead."
@@ -783,7 +783,7 @@
       "model": "gpt-6.1-sol",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 107.84,
+      "latency_ms": 187.3,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead."
@@ -792,7 +792,7 @@
       "model": "gpt-6.1-terra",
       "supports_logprobs": false,
       "http_status": 400,
-      "latency_ms": 124.28,
+      "latency_ms": 130.01,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead."
@@ -801,7 +801,7 @@
       "model": "gpt-live-1",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 104.21,
+      "latency_ms": 78.86,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -810,7 +810,7 @@
       "model": "o1",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 127.81,
+      "latency_ms": 127.29,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o1` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -819,7 +819,7 @@
       "model": "o1-2024-12-17",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 104.16,
+      "latency_ms": 83.61,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o1-2024-12-17` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -828,7 +828,7 @@
       "model": "o1-pro",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 85.86,
+      "latency_ms": 69.17,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o1-pro` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -837,7 +837,7 @@
       "model": "o1-pro-2025-03-19",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 131.95,
+      "latency_ms": 74.79,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o1-pro-2025-03-19` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -846,7 +846,7 @@
       "model": "o3",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 130.24,
+      "latency_ms": 92.28,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -855,7 +855,7 @@
       "model": "o3-2025-04-16",
       "supports_logprobs": false,
       "http_status": 403,
-      "latency_ms": 119.73,
+      "latency_ms": 95.13,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "You are not allowed to request logprobs from this model"
@@ -864,7 +864,7 @@
       "model": "o3-mini",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 82.63,
+      "latency_ms": 74.28,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o3-mini` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -873,7 +873,7 @@
       "model": "o3-mini-2025-01-31",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 82.28,
+      "latency_ms": 69.16,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o3-mini-2025-01-31` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -882,7 +882,7 @@
       "model": "o4-mini",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 108.25,
+      "latency_ms": 76.28,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o4-mini` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
@@ -891,7 +891,7 @@
       "model": "o4-mini-2025-04-16",
       "supports_logprobs": false,
       "http_status": 404,
-      "latency_ms": 96.3,
+      "latency_ms": 81.45,
       "model_returned": null,
       "error_type": "invalid_request_error",
       "error_message": "The model `o4-mini-2025-04-16` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations"
